@@ -1,0 +1,36 @@
+{
+  "train": {
+    "final_value": 16262.174359987654,
+    "total_return": 0.6262174359987653,
+    "avg_reward": 0.01683342123527316,
+    "cumulative_reward": 55.78595797369525,
+    "sharpe": 0.4050136360014107,
+    "max_drawdown": -0.16586683649285033,
+    "action_counts": {
+      "hold": 1815,
+      "buy": 797,
+      "sell": 702
+    },
+    "n_steps": 3314
+  },
+  "test": {
+    "final_value": 13176.68281078538,
+    "total_return": 0.31766828107853806,
+    "avg_reward": 0.03529939318797329,
+    "cumulative_reward": 29.22789755964188,
+    "sharpe": 0.8918258434870108,
+    "max_drawdown": -0.09196695495369504,
+    "action_counts": {
+      "hold": 275,
+      "buy": 446,
+      "sell": 107
+    },
+    "n_steps": 828
+  },
+  "buy_hold": {
+    "final_value": 18595.590849986078,
+    "total_return": 0.8595590849986079,
+    "sharpe": 1.3538758584018322,
+    "max_drawdown": -0.1890220618428401
+  }
+}

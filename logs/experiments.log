@@ -1,0 +1,33 @@
+EXPERIMENT LOG — Deep Q-Network Algorithmic Trading Agent
+========================================================================================
+Exp#  Parameters                                      Results                           
+----------------------------------------------------------------------------------------
+1     {"algorithm": "DQN", "network": "MLP(12, 64...  TrainRet=-57.31% | TestRet=21.64% 
+      Split=80:20 chronological  N=4144  Episodes=35
+      Sharpe(test)=0.694  MaxDD(test)=-11.32%  B&H=85.96%
+      Notes: Baseline: hidden=64-64, lr=1e-3, gamma=0.99
+
+2     {"algorithm": "DQN", "network": "MLP(12, 12...  TrainRet=-5.61% | TestRet=-5.47%  
+      Split=80:20 chronological  N=4144  Episodes=35
+      Sharpe(test)=-0.224  MaxDD(test)=-14.19%  B&H=85.96%
+      Notes: Wider net: hidden=128-64, lr=5e-4
+
+3     {"algorithm": "DQN", "network": "MLP(12, 64...  TrainRet=-40.51% | TestRet=15.94% 
+      Split=80:20 chronological  N=4144  Episodes=35
+      Sharpe(test)=0.546  MaxDD(test)=-8.03%  B&H=85.96%
+      Notes: Higher discount gamma=0.995, slower epsilon decay
+
+4     {"algorithm": "DQN", "network": "MLP(12, 64...  TrainRet=-63.85% | TestRet=10.61% 
+      Split=80:20 chronological  N=4144  Episodes=35
+      Sharpe(test)=0.37  MaxDD(test)=-7.68%  B&H=85.96%
+      Notes: Lower LR=1e-4, stronger L2=1e-3
+
+5     {"algorithm": "DQN", "network": "MLP(12, 64...  TrainRet=-57.20% | TestRet=32.88% 
+      Split=80:20 chronological  N=4144  Episodes=50
+      Sharpe(test)=1.017  MaxDD(test)=-7.18%  B&H=85.96%
+      Notes: Primary final: 64-64, lr=1e-3, eps_decay=0.97, 50 episodes
+
+6     {"algorithm": "DQN", "network": "MLP(12, 64...  TrainRet=62.62% | TestRet=31.77%  
+      Split=80:20 chronological  N=4144  Episodes=60
+      Sharpe(test)=0.892  MaxDD(test)=-9.20%  B&H=85.96%
+      Notes: Final Double-DQN: reward_scale=100, best-val checkpoint, 60 episodes
